@@ -24,3 +24,5 @@ function adjustCanvas(canvas) {
         }
     }, 100);
 }
+
+console.log('utils.js executed');
