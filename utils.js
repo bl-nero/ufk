@@ -25,4 +25,22 @@ function adjustCanvas(canvas) {
     }, 100);
 }
 
-console.log('utils.js executed');
+
+function getTouchPoint(element, touch) {
+    var offsetLeft = 0;
+    var offsetTop = 0;
+    do {
+        if (!isNaN(element.offsetLeft)) {
+            offsetLeft += element.offsetLeft;
+        }
+        if (!isNaN(element.offsetTop)) {
+            offsetTop += element.offsetTop;
+        }
+    } while(element = element.offsetParent);
+    return {
+        x: touch.pageX - offsetLeft,
+        y: touch.pageY - offsetTop
+    };
+}
+
+console.log('utils.js loaded');
