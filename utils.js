@@ -1,4 +1,4 @@
-(function() {
+window.addEventListener('load', function() {
     var viewport = document.createElement("meta");
     viewport.setAttribute('name', 'viewport');
     viewport.setAttribute(
